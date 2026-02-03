@@ -1,0 +1,287 @@
+@page "/about"
+
+<PageTitle>About Us - @WebsiteKeys.Title</PageTitle>
+
+<div class="py-8">
+    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1 class="font-heading text-3xl font-bold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            About Helios Systems
+        </h1>
+        <p class="text-lg leading-7 text-gray-400">
+            Illuminating the path to better IT solutions since day one
+        </p>
+    </div>
+
+    <div class="prose prose-invert prose-lg max-w-none">
+        <section class="mb-12">
+            <h2 class="font-heading text-2xl font-bold text-white">Our Story</h2>
+            <p class="text-gray-300">
+                Named after the Greek god of the sun, Helios Systems was founded with a clear mission:
+                to bring clarity and illumination to the often complex world of IT infrastructure.
+                We believe that technology should empower businesses, not complicate them.
+            </p>
+            <p class="text-gray-300">
+                Our team combines deep technical expertise with a commitment to understanding your
+                unique business challenges. We don't just implement solutions—we partner with you
+                to ensure technology serves your goals.
+            </p>
+        </section>
+
+        <!-- Team Section -->
+        <section class="mb-12 not-prose">
+            <h2 class="font-heading text-2xl font-bold text-white mb-6">Meet the Team</h2>
+            <div class="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Profile Info -->
+                    <div class="flex-1">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-2xl font-bold text-gray-900">
+                                B
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-white">Blake Bridgway</h3>
+                                <p class="text-primary-400 font-medium">Founder & Principal Engineer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            Cloud Engineer focused on Site Reliability and DevOps in the healthcare industry.
+                            Blake designs and builds highly scalable, resilient infrastructure that powers modern healthcare systems.
+                        </p>
+                        <p class="text-gray-400 text-sm mb-6">
+                            Day-to-day, he works with .NET, JavaScript, and TypeScript to deliver reliable platforms.
+                            Outside of work, he builds with <span class="text-primary-400 font-medium">Go</span>—creating
+                            tools that prioritize performance, privacy, and user empowerment.
+                        </p>
+
+                        <!-- Core Competencies -->
+                        <div class="space-y-2 mb-6">
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Core Competencies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30">Site Reliability Engineering</span>
+                                <span class="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30">Cloud Infrastructure</span>
+                                <span class="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30">DevOps & Automation</span>
+                                <span class="px-3 py-1 text-sm rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30">Network Engineering</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex gap-3">
+                            <a href="https://github.com/blakebridgway" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors text-sm">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="md:w-72 flex-shrink-0">
+                        <div class="p-4 rounded-xl bg-gray-800/50 border border-gray-700">
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Technologies</h4>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Cloud & Infrastructure</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">AWS</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Azure</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Linux</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Debian</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">DevOps & Automation</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Docker</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Kubernetes</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Terraform</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Git</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Networking & Security</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Cisco</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Fortigate</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">pfSense</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Languages</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-primary-500/30 text-primary-300">Go</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">.NET</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">TypeScript</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-Founder Card: Nic -->
+            <div class="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800 mt-6">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Profile Info -->
+                    <div class="flex-1">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-2xl font-bold text-white">
+                                N
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-white">Nic Fitzgerald</h3>
+                                <p class="text-purple-400 font-medium">Co-Founder & Developer</p>
+                                <p class="text-gray-500 text-sm">they/them</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A passionate developer with an ever-evolving set of interests and a love for building
+                            tools that make a difference. Currently focused on annotation exporters and YouTube tooling.
+                        </p>
+                        <p class="text-gray-400 text-sm mb-6">
+                            Currently learning <span class="text-purple-400 font-medium">Svelte</span> and
+                            <span class="text-purple-400 font-medium">Go</span>. Fun fact: the Octopus is their
+                            favorite animal, followed closely by Raccoons and Opossums.
+                        </p>
+
+                        <!-- Current Focus -->
+                        <div class="space-y-2 mb-6">
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Current Focus</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">Kobo Annotation Exporter</span>
+                                <span class="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">YouTube Tooling</span>
+                                <span class="px-3 py-1 text-sm rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">Desktop Apps</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://bsky.app/profile/nicfitzgerald.dev" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors text-sm">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+                                Bluesky
+                            </a>
+                            <a href="https://hachyderm.io/@@nicfitzgerald" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-colors text-sm">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/></svg>
+                                Mastodon
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="md:w-72 flex-shrink-0">
+                        <div class="p-4 rounded-xl bg-gray-800/50 border border-gray-700">
+                            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Current Stack</h4>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Frontend</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-purple-500/30 text-purple-300">Svelte</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Backend & CLI</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-purple-500/30 text-purple-300">Go</span>
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Wails</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-2">Infrastructure</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 text-xs rounded bg-gray-700 text-gray-300">Cloudflare</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-2 border-t border-gray-700">
+                                    <p class="text-xs text-gray-500 mb-2">Favorite Animals</p>
+                                    <div class="flex gap-2 text-lg">
+                                        <span title="Octopus">🐙</span>
+                                        <span title="Raccoon">🦝</span>
+                                        <span title="Opossum">🐀</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="font-heading text-2xl font-bold text-white">Our Values</h2>
+            <div class="grid md:grid-cols-2 gap-6 not-prose mt-6">
+                <div class="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
+                    <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center mb-3">
+                        <span class="text-xl">💡</span>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Clarity</h3>
+                    <p class="text-gray-400 text-sm">We explain complex technical concepts in plain language and provide transparent recommendations.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
+                    <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center mb-3">
+                        <span class="text-xl">🔧</span>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Craftsmanship</h3>
+                    <p class="text-gray-400 text-sm">We take pride in building solutions that are robust, maintainable, and built to last.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
+                    <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center mb-3">
+                        <span class="text-xl">🤝</span>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Partnership</h3>
+                    <p class="text-gray-400 text-sm">We work alongside your team, sharing knowledge and building internal capabilities.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-gray-900/50 border border-gray-800">
+                    <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center mb-3">
+                        <span class="text-xl">🌱</span>
+                    </div>
+                    <h3 class="font-heading text-lg font-semibold text-white mb-2">Open Source First</h3>
+                    <p class="text-gray-400 text-sm">We champion open source solutions that give you control and freedom from vendor lock-in.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="font-heading text-2xl font-bold text-white">Why Choose Us?</h2>
+            <ul class="text-gray-300 space-y-3">
+                <li class="flex items-start gap-3">
+                    <span class="text-primary-400 mt-1">✓</span>
+                    <span><strong class="text-white">Vendor-Agnostic Approach:</strong> We recommend the best solution for your needs, not the one that pays us the highest commission.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-primary-400 mt-1">✓</span>
+                    <span><strong class="text-white">Knowledge Transfer:</strong> We don't create dependency. We teach your team and document everything.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-primary-400 mt-1">✓</span>
+                    <span><strong class="text-white">Long-Term Thinking:</strong> We design solutions that will serve you well for years, not just pass the next audit.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-primary-400 mt-1">✓</span>
+                    <span><strong class="text-white">Responsive Support:</strong> When issues arise, we respond quickly and communicate clearly.</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 text-center bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-2xl p-8 border border-primary-500/20">
+        <h2 class="font-heading text-2xl font-bold text-white mb-4">Ready to Work Together?</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+            We'd love to learn about your challenges and explore how we can help.
+        </p>
+        <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-primary-500 hover:bg-primary-400 transition-colors">
+            Get in Touch
+        </a>
+    </div>
+</div>

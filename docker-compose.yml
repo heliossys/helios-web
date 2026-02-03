@@ -1,0 +1,33 @@
+services:
+  helios-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helios-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    labels:
+      - "com.helios.service=website"
+
+# For production with Traefik reverse proxy, uncomment below:
+# services:
+#   helios-web:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     container_name: helios-web
+#     restart: unless-stopped
+#     expose:
+#       - "80"
+#     labels:
+#       - "traefik.enable=true"
+#       - "traefik.http.routers.helios-web.rule=Host(`heliossystems.net`)"
+#       - "traefik.http.routers.helios-web.entrypoints=websecure"
+#       - "traefik.http.routers.helios-web.tls.certresolver=letsencrypt"
+#     networks:
+#       - traefik
+#
+# networks:
+#   traefik:
+#     external: true

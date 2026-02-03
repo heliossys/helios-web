@@ -1,0 +1,142 @@
+﻿@inherits LayoutComponentBase
+
+<!-- Skip to Content Link (Accessibility) -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-500 focus:text-gray-900 focus:rounded-lg focus:font-medium">
+    Skip to content
+</a>
+
+<div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 ">
+    <div class="flex h-screen flex-col justify-between">
+
+        <NavMenu/>
+
+        <main id="main-content" class="mb-auto">
+            @Body
+        </main>
+
+        <footer class="border-t border-gray-800">
+            <div class="py-12">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <!-- Brand -->
+                    <div class="md:col-span-2">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg class="w-6 h-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="footerSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#fcd34d"/>
+                                        <stop offset="50%" style="stop-color:#fbbf24"/>
+                                        <stop offset="100%" style="stop-color:#f59e0b"/>
+                                    </linearGradient>
+                                </defs>
+                                <g fill="#f59e0b">
+                                    <rect x="46" y="5" width="8" height="20" rx="4"/>
+                                    <rect x="46" y="75" width="8" height="20" rx="4"/>
+                                    <rect x="5" y="46" width="20" height="8" rx="4"/>
+                                    <rect x="75" y="46" width="20" height="8" rx="4"/>
+                                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(45 50 50)"/>
+                                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(135 50 50)"/>
+                                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(225 50 50)"/>
+                                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(315 50 50)"/>
+                                </g>
+                                <circle cx="50" cy="50" r="22" fill="url(#footerSunGrad)"/>
+                            </svg>
+                            <span class="font-heading text-xl font-bold text-primary-400">@WebsiteKeys.Title</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4">@WebsiteKeys.Tagline</p>
+                        <div class="flex space-x-4">
+                            <a class="text-gray-500 transition hover:text-primary-400" target="_blank" rel="noopener noreferrer" href="@WebsiteKeys.GitHubRepo">
+                                <span class="sr-only">GitHub</span>
+                                <Svg Icon="Svg.Icons.Github"/>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Services</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="/services#opensource" class="hover:text-primary-400 transition-colors">Open Source Solutions</a></li>
+                            <li><a href="/services#security" class="hover:text-primary-400 transition-colors">Firewall & Security</a></li>
+                            <li><a href="/services#networking" class="hover:text-primary-400 transition-colors">Networking</a></li>
+                            <li><a href="/services#cloud" class="hover:text-primary-400 transition-colors">Cloud Infrastructure</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="font-semibold text-white mb-4">Contact</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="mailto:@WebsiteKeys.Email" class="hover:text-primary-400 transition-colors">@WebsiteKeys.Email</a></li>
+                            <li><a href="/contact" class="hover:text-primary-400 transition-colors">Contact Form</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+                    <div>© @DateTime.Now.Year @WebsiteKeys.Title. All rights reserved.</div>
+                    <div class="flex space-x-4 mt-4 sm:mt-0">
+                        <a href="/privacy" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+                        <a href="/terms" class="hover:text-gray-400 transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-primary-500 text-gray-900 shadow-lg hover:bg-primary-400 transition-all opacity-0 invisible"
+        aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+</button>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-gray-900 border-t border-gray-700 hidden">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-300">
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+            <a href="/privacy" class="text-primary-400 hover:text-primary-300 underline">Learn more</a>
+        </p>
+        <div class="flex gap-3">
+            <button onclick="acceptCookies()" class="px-4 py-2 text-sm font-medium rounded-lg bg-primary-500 text-gray-900 hover:bg-primary-400 transition-colors">
+                Accept
+            </button>
+            <button onclick="declineCookies()" class="px-4 py-2 text-sm font-medium rounded-lg border border-gray-600 text-gray-300 hover:bg-gray-800 transition-colors">
+                Decline
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Back to Top Button
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('back-to-top');
+        if (window.scrollY > 300) {
+            btn.classList.remove('opacity-0', 'invisible');
+            btn.classList.add('opacity-100', 'visible');
+        } else {
+            btn.classList.add('opacity-0', 'invisible');
+            btn.classList.remove('opacity-100', 'visible');
+        }
+    });
+
+    // Cookie Consent
+    (function() {
+        if (!localStorage.getItem('cookie-consent')) {
+            document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+    })();
+
+    function acceptCookies() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function declineCookies() {
+        localStorage.setItem('cookie-consent', 'declined');
+        document.getElementById('cookie-banner').classList.add('hidden');
+        window['ga-disable-G-XXXXXXXXXX'] = true;
+    }
+</script>

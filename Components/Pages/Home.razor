@@ -1,0 +1,144 @@
+@page "/"
+
+<PageTitle>@WebsiteKeys.Title - @WebsiteKeys.Tagline</PageTitle>
+
+<!-- Hero Section -->
+<section class="py-16 md:py-24">
+    <div class="text-center">
+        <!-- Logo -->
+        <div class="flex justify-center mb-6">
+            <svg class="w-24 h-24 md:w-32 md:h-32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="heroSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#fcd34d"/>
+                        <stop offset="50%" style="stop-color:#fbbf24"/>
+                        <stop offset="100%" style="stop-color:#f59e0b"/>
+                    </linearGradient>
+                </defs>
+                <g fill="#f59e0b">
+                    <rect x="46" y="5" width="8" height="20" rx="4"/>
+                    <rect x="46" y="75" width="8" height="20" rx="4"/>
+                    <rect x="5" y="46" width="20" height="8" rx="4"/>
+                    <rect x="75" y="46" width="20" height="8" rx="4"/>
+                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(45 50 50)"/>
+                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(135 50 50)"/>
+                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(225 50 50)"/>
+                    <rect x="46" y="5" width="6" height="16" rx="3" transform="rotate(315 50 50)"/>
+                </g>
+                <circle cx="50" cy="50" r="22" fill="url(#heroSunGrad)"/>
+            </svg>
+        </div>
+        <h1 class="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+            <span class="text-primary-400">Helios</span> Systems
+        </h1>
+        <p class="mt-4 text-xl text-primary-300 font-medium">@WebsiteKeys.Tagline</p>
+        <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
+            @WebsiteKeys.Description
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-primary-500 hover:bg-primary-400 transition-colors">
+                Get Started
+            </a>
+            <a href="/services" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-primary-400 border border-primary-500 hover:bg-primary-500/10 transition-colors">
+                Our Services
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-16 border-t border-gray-800">
+    <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-bold text-white">What We Do</h2>
+        <p class="mt-4 text-gray-400">Comprehensive IT solutions tailored to your business needs</p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+        @foreach (var service in services)
+        {
+            <div class="p-6 rounded-xl bg-gray-900/50 border border-gray-800 hover:border-primary-500/50 transition-colors">
+                <div class="w-12 h-12 rounded-lg bg-primary-500/20 flex items-center justify-center mb-4">
+                    <span class="text-2xl">@service.Icon</span>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-white mb-2">@service.Title</h3>
+                <p class="text-gray-400">@service.Description</p>
+                <a href="@service.Link" class="inline-flex items-center mt-4 text-primary-400 hover:text-primary-300 text-sm font-medium">
+                    Learn more →
+                </a>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Managed Services CTA -->
+<section class="py-16 border-t border-gray-800">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
+                Already Have Infrastructure?
+            </h2>
+            <p class="text-gray-300 mb-4">
+                We don't just build new systems—we manage and optimize existing ones. Whether you need ongoing support, proactive monitoring, or help getting your current setup under control, we've got you covered.
+            </p>
+            <ul class="space-y-2 text-gray-400 mb-6">
+                <li class="flex items-center gap-2">
+                    <span class="text-primary-400">✓</span>
+                    <span>24/7 monitoring and alerting</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary-400">✓</span>
+                    <span>Patch management and security updates</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary-400">✓</span>
+                    <span>Performance optimization</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary-400">✓</span>
+                    <span>Backup and disaster recovery</span>
+                </li>
+            </ul>
+            <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-primary-400 border border-primary-500 hover:bg-primary-500/10 transition-colors">
+                Discuss Managed Services
+            </a>
+        </div>
+        <div class="p-8 rounded-xl bg-gray-900/50 border border-gray-800">
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-3xl">🔧</span>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-white mb-2">Managed IT Services</h3>
+                <p class="text-gray-400 text-sm">
+                    Focus on your business while we handle the technology. Our managed services give you enterprise-level IT support without the overhead of an in-house team.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 border-t border-gray-800">
+    <div class="text-center bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-2xl p-8 md:p-12 border border-primary-500/20">
+        <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">
+            Ready to Transform Your IT Infrastructure?
+        </h2>
+        <p class="text-gray-300 mb-8 max-w-xl mx-auto">
+            Let's discuss how Helios Systems can help illuminate the path to better technology solutions for your business.
+        </p>
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg text-gray-900 bg-primary-500 hover:bg-primary-400 transition-colors">
+            Schedule a Consultation
+        </a>
+    </div>
+</section>
+
+@code {
+    private record ServiceCard(string Icon, string Title, string Description, string Link);
+
+    private List<ServiceCard> services = new()
+    {
+        new("🔓", "Open Source Solutions", "Leverage the power of open source software to reduce costs and increase flexibility.", "/services#opensource"),
+        new("🛡️", "Firewall & Security", "Protect your business with enterprise-grade security solutions and proactive threat management.", "/services#security"),
+        new("🌐", "Networking Infrastructure", "Build reliable, scalable network infrastructure that grows with your business.", "/services#networking"),
+        new("☁️", "Cloud Infrastructure", "Modernize your operations with secure, efficient cloud solutions.", "/services#cloud")
+    };
+}

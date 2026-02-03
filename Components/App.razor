@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base href="/"/>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="@WebsiteKeys.Description"/>
+    <meta name="keywords" content="IT consulting, open source, network security, firewall, cloud infrastructure, Linux, pfSense, enterprise IT"/>
+    <meta name="author" content="@WebsiteKeys.Title"/>
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="@WebsiteKeys.Title"/>
+    <meta property="og:title" content="@WebsiteKeys.Title - @WebsiteKeys.Tagline"/>
+    <meta property="og:description" content="@WebsiteKeys.Description"/>
+    <meta property="og:url" content="https://heliossystems.net"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="@WebsiteKeys.Title - @WebsiteKeys.Tagline"/>
+    <meta name="twitter:description" content="@WebsiteKeys.Description"/>
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f59e0b"/>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
+        "name": "Helios Systems",
+        "url": "https://heliossystems.net",
+        "logo": "https://heliossystems.net/logo.svg",
+        "description": "Expert IT consulting specializing in open source solutions, network security, and cloud infrastructure.",
+        "email": "info@heliossystems.net",
+        "sameAs": [
+            "https://github.com/helios-systems"
+        ],
+        "serviceType": ["IT Consulting", "Network Security", "Cloud Infrastructure", "Open Source Solutions"]
+    }
+    </script>
+
+    <!-- Favicon and Web Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                            950: '#451a03',
+                        },
+                        secondary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                            950: '#431407',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        /* Page load animation */
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        /* Smooth transitions for interactive elements */
+        a, button {
+            transition: all 0.2s ease;
+        }
+
+        /* Lazy loading fade-in for images */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+
+        /* Form loading state */
+        .form-loading {
+            position: relative;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .form-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin: -12px 0 0 -12px;
+            border: 3px solid #f59e0b;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @@keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Reduced motion support */
+        @@media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            main {
+                animation: none;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus visible for keyboard navigation */
+        :focus-visible {
+            outline: 2px solid #f59e0b;
+            outline-offset: 2px;
+        }
+
+        /* Loading skeleton animation */
+        .skeleton {
+            background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @@keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+
+    <HeadOutlet/>
+</head>
+
+<body class="bg-gray-950 font-sans text-gray-200">
+<Routes/>
+
+<script>
+    // Lazy loading image fade-in
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => img.classList.add('loaded'));
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
