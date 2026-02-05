@@ -1,5 +1,5 @@
-# Helios Systems - heliossystems.net
+# Helios Systems - heliossystems.org
 User-agent: *
 Allow: /
 
-Sitemap: https://heliossystems.net/sitemap.xml
+Sitemap: https://heliossystems.org/sitemap.xml

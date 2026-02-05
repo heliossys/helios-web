@@ -22,7 +22,7 @@ services:
 #       - "80"
 #     labels:
 #       - "traefik.enable=true"
-#       - "traefik.http.routers.helios-web.rule=Host(`heliossystems.net`)"
+#       - "traefik.http.routers.helios-web.rule=Host(`heliossystems.org`)"
 #       - "traefik.http.routers.helios-web.entrypoints=websecure"
 #       - "traefik.http.routers.helios-web.tls.certresolver=letsencrypt"
 #     networks:

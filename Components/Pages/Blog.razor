@@ -146,7 +146,7 @@
                     <h3 class="text-sm font-medium text-gray-400 mb-3">Share this article</h3>
                     <div class="flex gap-3">
                         @{
-                            var shareUrl = $"https://heliossystems.net/blog/{FileName}";
+                            var shareUrl = $"https://heliossystems.org/blog/{FileName}";
                             var shareTitle = System.Net.WebUtility.UrlEncode(post.FrontMatter.Title);
                             var shareText = System.Net.WebUtility.UrlEncode(post.FrontMatter.Lead ?? post.FrontMatter.Title);
                         }

@@ -11,7 +11,7 @@ builder.WebHost.UseStaticWebAssets();
 
 builder.Services.AddBlazorStaticService(opt => {
     opt.ShouldGenerateSitemap = true;
-    opt.SiteUrl = "https://heliossystems.net";
+    opt.SiteUrl = "https://heliossystems.org";
 
     // Register pages without markdown files for static generation
     opt.PagesToGenerate.Add(new PageToGenerate("/", "index.html"));
@@ -54,5 +54,5 @@ public static class WebsiteKeys
     public const string Description = "Expert IT consulting specializing in open source solutions, network security, and cloud infrastructure.";
     public const string BlogPostStorageAddress = $"{GitHubRepo}/tree/main/Content/Blog";
     public const string BlogLead = "Insights and expertise from the Helios Systems team";
-    public const string Email = "info@heliossystems.net";
+    public const string Email = "info@heliossystems.org";
 }
